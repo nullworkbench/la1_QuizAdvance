@@ -56,12 +56,20 @@ class QuizzezTableViewController: UITableViewController {
     
     // 削除
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        // quizArrayから削除
-        quizArray.remove(at: indexPath.row)
-        UserDefaults.standard.set(quizArray, forKey: "quizArray")
         
-        // tableViewから削除
-        tableView.deleteRows(at: [indexPath], with: .automatic)
+        // 確認アラート
+        let alert = UIAlertController(title: "Are you sure want to delete?", message: "Deleted Quiz will never recovered.", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: "Delete", style: .destructive, handler: { action in
+            // quizArrayから削除
+            self.quizArray.remove(at: indexPath.row)
+            UserDefaults.standard.set(self.quizArray, forKey: "quizArray")
+            
+            // tableViewから削除
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+        }))
+        present(alert, animated: true, completion: nil)
+        
     }
     
     /*

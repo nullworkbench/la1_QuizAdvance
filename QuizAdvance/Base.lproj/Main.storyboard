@@ -31,7 +31,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="egb-Gw-GTi" customClass="DesignableButton" customModule="QuizAdvance" customModuleProvider="target">
-                                <rect key="frame" x="124" y="551.5" width="166" height="44.5"/>
+                                <rect key="frame" x="124" y="531.5" width="166" height="44.5"/>
                                 <color key="backgroundColor" white="1" alpha="0.24923735120000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="egb-Gw-GTi" secondAttribute="height" multiplier="15:4" id="29L-X3-ulw"/>
@@ -50,9 +50,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cD0-Z2-Mj9" customClass="DesignableButton" customModule="QuizAdvance" customModuleProvider="target">
-                                <rect key="frame" x="160.5" y="626" width="93" height="40"/>
+                                <rect key="frame" x="171" y="606" width="72" height="40"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
-                                <state key="normal" title="Questions">
+                                <state key="normal" title="Quizzes">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -70,7 +70,7 @@
                         <constraints>
                             <constraint firstItem="COG-QS-yEX" firstAttribute="top" secondItem="vO3-G1-6H0" secondAttribute="bottom" constant="50" id="30b-XI-Z8D"/>
                             <constraint firstItem="vO3-G1-6H0" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.4" id="9Pl-hT-4Fg"/>
-                            <constraint firstItem="egb-Gw-GTi" firstAttribute="top" secondItem="COG-QS-yEX" secondAttribute="bottom" constant="180" id="OcX-ac-ZrM"/>
+                            <constraint firstItem="egb-Gw-GTi" firstAttribute="top" secondItem="COG-QS-yEX" secondAttribute="bottom" constant="160" id="OcX-ac-ZrM"/>
                             <constraint firstItem="egb-Gw-GTi" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.4" id="Ow6-GP-lmh"/>
                             <constraint firstItem="vO3-G1-6H0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XGl-pY-gyQ"/>
                             <constraint firstItem="egb-Gw-GTi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eWf-gq-foa"/>
@@ -654,7 +654,7 @@
             <size key="intrinsicContentSize" width="34" height="30"/>
         </designable>
         <designable name="cD0-Z2-Mj9">
-            <size key="intrinsicContentSize" width="93" height="40"/>
+            <size key="intrinsicContentSize" width="72" height="40"/>
         </designable>
         <designable name="ctu-6b-ADa">
             <size key="intrinsicContentSize" width="82" height="40"/>
