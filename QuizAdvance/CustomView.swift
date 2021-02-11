@@ -10,6 +10,15 @@ import UIKit
 @IBDesignable
 final class GradientView: UIView {
     
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+//        fatalError("init(coder:) has not been implemented")
+    }
+    
     @IBInspectable var Color1: UIColor = UIColor.orange
     @IBInspectable var Color2: UIColor = UIColor.red
     
@@ -35,6 +44,16 @@ final class GradientView: UIView {
 
 @IBDesignable
 final class DesignableButton: UIButton {
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+//        fatalError("init(coder:) has not been implemented")
+    }
+    
     @IBInspectable var CornerRadius: CGFloat {
         get {
             return layer.cornerRadius
@@ -43,4 +62,51 @@ final class DesignableButton: UIButton {
             layer.cornerRadius = newValue
         }
     }
+    
+    @IBInspectable
+        var shadowRadius: CGFloat {
+            get {
+                return layer.shadowRadius
+            }
+            set {
+                layer.shadowRadius = newValue
+            }
+        }
+
+        @IBInspectable
+        var shadowOpacity: Float {
+            get {
+                return layer.shadowOpacity
+            }
+            set {
+                layer.shadowOpacity = newValue
+            }
+        }
+
+        @IBInspectable
+        var shadowOffset: CGSize {
+            get {
+                return layer.shadowOffset
+            }
+            set {
+                layer.shadowOffset = newValue
+            }
+        }
+
+        @IBInspectable
+        var shadowColor: UIColor? {
+            get {
+                if let color = layer.shadowColor {
+                    return UIColor(cgColor: color)
+                }
+                return nil
+            }
+            set {
+                if let color = newValue {
+                    layer.shadowColor = color.cgColor
+                } else {
+                    layer.shadowColor = nil
+                }
+            }
+        }
 }

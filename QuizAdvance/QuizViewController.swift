@@ -22,10 +22,8 @@ class QuizViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // quizArrayに問題を追加
-        quizArray.append(["SwiftとXcodeで制作できるものは？", "Androidアプリ", "iOSアプリ", "Webアプリ", 2])
-        quizArray.append(["文字列を示す型は？", "String", "Int", "Float", 1])
-        quizArray.append(["1 + 1の答えを出力するのは？", "print(\"1\" + \"1\")", "print(1 + 1)", "print(\"1 + 1\")", 2])
+        // UserDefaultsから問題を持ってくる
+        quizArray = UserDefaults.standard.array(forKey: "quizArray")!
         
         // 問題をシャッフル
         quizArray.shuffle()
