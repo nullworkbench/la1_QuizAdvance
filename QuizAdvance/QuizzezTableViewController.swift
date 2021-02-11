@@ -45,12 +45,23 @@ class QuizzezTableViewController: UITableViewController {
         return cell!
     }
     
+    // Cell選択
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         tableView.cellForRow(at: indexPath)?.textLabel?.textColor = UIColor.white
         
         selectedQuizIndex = indexPath.row
         performSegue(withIdentifier: "toQuizzesDetailView", sender: nil)
+    }
+    
+    // 削除
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        // quizArrayから削除
+        quizArray.remove(at: indexPath.row)
+        UserDefaults.standard.set(quizArray, forKey: "quizArray")
+        
+        // tableViewから削除
+        tableView.deleteRows(at: [indexPath], with: .automatic)
     }
     
     /*
